@@ -47,6 +47,7 @@ public class ResumeSubmission {
     @SneakyThrows
     private static Integer resume(){
         driver.get(baseUrl);
+        Thread.sleep(2000);
         wait15s.until(ExpectedConditions.elementToBeClickable(By.className("carrybox")));
         driver.findElement(By.className("carrybox")).click();
         List<WebElement> clist = driver.findElements(By.className("clist"));
